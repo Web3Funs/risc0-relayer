@@ -1,0 +1,44 @@
+name: "risc0-relayer"
+version: "0.1.0"
+about: risc0-relayer
+authors: "risc0-relayer"
+
+# AppSettings can be defined as a list and are **not** ascii case sensitive
+settings:
+    - ColoredHelp
+
+# All subcommands must be listed in the 'subcommand:' object, where the key to
+# the list is the name of the subcommand, and all settings for that command are
+# are part of a Hash
+args:
+    - key:
+          short: k
+          long: key
+          help: Set the private key to sign the blockchain request
+          takes_value: true
+          default_value: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    - api:
+          short: a
+          long: api
+          help: Set the self server api endpoint
+          takes_value: true
+          default_value: "0.0.0.0:6789"
+    - scheduler:
+          short: s
+          long: scheduler
+          help: The scheduler rpc endpoint
+          takes_value: true
+          default_value: "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    - start_num:
+          short: b
+          long: start_num
+          help: The start block num when start relayer
+          takes_value: true
+          default_value: "0"
+    - contract:
+          short: c
+          long: contract
+          help: Risc0 demo contract
+          takes_value: true
+          default_value: "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    
